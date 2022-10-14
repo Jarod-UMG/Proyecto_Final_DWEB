@@ -1,5 +1,5 @@
 <?php
-//var_dump($datar);
+require_once "views/Inicio.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,7 +11,7 @@
 	</head>
 	
 	<body>
-		<div class="container">
+		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=medicamentos&a=guarda" autocomplete="off">

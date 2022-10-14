@@ -7,8 +7,6 @@
 		}*/
 		
 		public function index(){
-			
-			
 			/*$roles = new Roles_model();
 			$data["titulo"] = "Roles";
 			$data["roles"] = $roles->get_roles();*/

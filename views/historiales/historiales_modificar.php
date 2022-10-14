@@ -1,5 +1,5 @@
 <?php
-	
+require_once "views/Inicio.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 	</head>
 	
 	<body>
-		<div class="container">
+		<div class="container content">
 			
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
