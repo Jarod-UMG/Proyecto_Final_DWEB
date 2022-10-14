@@ -16,27 +16,28 @@ require_once "views/Inicio.php";
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=pacientes&a=guarda" autocomplete="off">
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="nombre_paciente">Nombres</label>
 					<input type="text" class="form-control" id="nombre_paciente" name="nombre_paciente" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="apellido_paciente">Apellidos</label>
 					<input type="text" class="form-control" id="apellido_paciente" name="apellido_paciente" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="direccion_paciente">Direccion</label>
 					<input type="text" class="form-control" id="direccion_paciente" name="direccion_paciente" />
 				</div>
-				<br/>
-                <div class="form-group">
+				
+                <div class="form-group mb-3">
 					<label for="telefono_paciente">Telefono</label>
 					<input type="text" class="form-control" id="telefono_paciente" name="telefono_paciente" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
                     <button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
                 </div>
 				

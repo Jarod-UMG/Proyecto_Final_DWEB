@@ -12,30 +12,28 @@ require_once "views/Inicio.php";
 	</head>
 	
 	<body>
-		<div class="container content">
-			
+		<div class="container content">		
 			<h2><?php echo $data["titulo"]; ?></h2>
-			
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=empleados&a=actualizar" autocomplete="off">
 				
 				<input type="hidden" id="id_empleado" name="id_empleado" value="<?php echo $data["id_empleado"]; ?>" />
 				
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label for="nombre_empleado">Nombre</label>
 					<input type="text" class="form-control" id="nombre_empleado" name="nombre_empleado" value="<?php echo $data["empleados"]["nombre_empleado"]?>" />
 				</div>
 				
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label for="apellido_empleado">Apellido</label>
 					<input type="text" class="form-control" id="apellido_empleado" name="apellido_empleado" value="<?php echo $data["empleados"]["apellido_empleado"]?>" />
 				</div>
 				
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label for="nit">Nit</label>
 					<input type="text" class="form-control" id="nit" name="nit" value="<?php echo $data["empleados"]["nit"]?>" />
 				</div>
 				
-                <div class="form-group">
+                <div class="form-group mb-3">
 					<label for="id_rol">Rol</label>
                     <select class="form-select" name="id_rol" id="id_rol">
 						<option value="<?php echo $data["empleados"]["id_rol"]?>" selected>--<?php echo $data["empleados"]["nombre_rol"]?>--</option>";
@@ -47,7 +45,7 @@ require_once "views/Inicio.php";
                     </select>
 				</div>
 
-                <div class="form-group">
+                <div class="form-group mb-3">
 					<label for="id_sucursal">Sucursal</label>
                     <select class="form-select" name="id_sucursal" id="id_sucursal">
 						echo "<option value="<?php echo $data["empleados"]["id_sucursal"]?>" selected>--<?php echo $data["empleados"]["nombre_sucursal"]?>--</option>";
@@ -59,8 +57,10 @@ require_once "views/Inicio.php";
                     </select>
 				</div>
 				
-				<button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
-				
+				<div class="form-group mb-3">
+					<button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+
 			</form>
 		</body>
 	</html>		

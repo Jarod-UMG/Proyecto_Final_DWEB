@@ -12,36 +12,35 @@ require_once "views/Inicio.php";
 	</head>
 	
 	<body>
-		<div class="container content">
-			
-			<h2><?php echo $data["titulo"]; ?></h2>
-			
+		<div class="container content">	
+			<h2><?php echo $data["titulo"]; ?></h2>			
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=pacientes&a=actualizar" autocomplete="off">
-				
+
 				<input type="hidden" id="id_paciente" name="id_paciente" value="<?php echo $data["id_paciente"]; ?>" />
-				
-				<div class="form-group">
+
+				<div class="form-group mb-3">
 					<label for="nombre_paciente">Nombre</label>
 					<input type="text" class="form-control" id="nombre_paciente" name="nombre_paciente" value="<?php echo $data["pacientes"]["nombre_paciente"]?>" />
 				</div>
 				
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label for="apellido_paciente">Apellido</label>
 					<input type="text" class="form-control" id="apellido_paciente" name="apellido_paciente" value="<?php echo $data["pacientes"]["apellido_paciente"]?>" />
 				</div>
 				
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label for="direccion_paciente">Direccion</label>
 					<input type="text" class="form-control" id="direccion_paciente" name="direccion_paciente" value="<?php echo $data["pacientes"]["direccion_paciente"]?>" />
 				</div>
 
-                <div class="form-group">
+                <div class="form-group mb-3">
 					<label for="telefono_paciente">Direccion</label>
 					<input type="text" class="form-control" id="telefono_paciente" name="telefono_paciente" value="<?php echo $data["pacientes"]["telefono_paciente"]?>" />
 				</div>
 				
-				
-				<button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
+				<div class="form-group mb-3">
+					<button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
+				</div>
 				
 			</form>
 		</body>

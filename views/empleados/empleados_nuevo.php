@@ -13,24 +13,24 @@ require_once "views/Inicio.php";
 	<body>
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
-			
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=empleados&a=guarda" autocomplete="off">
-				<div class="form-group">
+
+				<div class="form-group mb-3">
 					<label for="nombre_empleado">Nombres</label>
 					<input type="text" class="form-control" id="nombre_empleado" name="nombre_empleado" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="apellido_empleado">Apellidos</label>
 					<input type="text" class="form-control" id="apellido_empleado" name="apellido_empleado" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="nit">Nit</label>
 					<input type="text" class="form-control" id="nit" name="nit" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="id_rol">Rol</label>
                     <select class="form-select" name="id_rol" id="id_rol">
                         <option value=0> ---- Elija un rol---- </option>
@@ -41,8 +41,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-                <br/>
-                <div class="form-group">
+                
+                <div class="form-group mb-3">
 					<label for="id_sucursal">Sucursal</label>
                     <select class="form-select" name="id_sucursal" id="id_sucursal">
                         <option value=0> ---- Elija una sucursal---- </option>
@@ -53,8 +53,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
                     <button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
                 </div>
 				

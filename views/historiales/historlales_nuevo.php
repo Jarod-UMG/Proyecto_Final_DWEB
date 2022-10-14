@@ -12,15 +12,15 @@ require_once "views/Inicio.php";
 	
 	<body>
 		<div class="container content">
-			<h2><?php echo $data["titulo"]; ?></h2>
-			
+			<h2><?php echo $data["titulo"]; ?></h2>	
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=historiales&a=guarda" autocomplete="off">
-				<div class="form-group">
+
+				<div class="form-group mb-3">
 					<label for="fecha_registro">Fecha Registro</label>
 					<input type="date" class="form-control" id="fecha_registro" name="fecha_registro" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="id_paciente">Pacientes</label>
                     <select class="form-select" name="id_paciente" id="id_paciente">
                         <option value=0> ---- Elija un paciente---- </option>
@@ -31,8 +31,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-                <br/>
-                <div class="form-group">
+                
+                <div class="form-group mb-3">
 					<label for="id_sucursal">Sucursal</label>
                     <select class="form-select" name="id_sucursal" id="id_sucursal">
                         <option value=0> ---- Elija una sucursal---- </option>
@@ -43,8 +43,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-				<br/>
-                <div class="form-group">
+				
+                <div class="form-group mb-3">
 					<label for="id_diagnostico">Diagnosticos</label>
                     <select class="form-select" name="id_diagnostico" id="id_diagnostico">
                         <option value=0> ---- Elija un diagnostico---- </option>
@@ -55,8 +55,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-				<br/>
-                <div class="form-group">
+				
+                <div class="form-group mb-3">
 					<label for="id_examen">Examenes</label>
                     <select class="form-select" name="id_examen" id="id_examen">
                         <option value=0> ---- Elija un examen---- </option>
@@ -67,8 +67,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-				<br/>
-                <div class="form-group">
+				
+                <div class="form-group mb-3">
 					<label for="id_doctor">Doctores</label>
                     <select class="form-select" name="id_doctor" id="id_doctor">
                         <option value=0> ---- Elija un doctor---- </option>
@@ -79,8 +79,8 @@ require_once "views/Inicio.php";
                         ?>
                     </select>
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
                     <button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
                 </div>
 				

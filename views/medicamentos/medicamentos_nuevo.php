@@ -15,27 +15,27 @@ require_once "views/Inicio.php";
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
 			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=medicamentos&a=guarda" autocomplete="off">
-				<div class="form-group">
+				<div class="form-group mb-3">
 					<label for="nombre_medicamento">Nombres</label>
 					<input type="text" class="form-control" id="nombre_medicamento" name="nombre_medicamento" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="precio_u">Precio Unitario</label>
 					<input type="text" class="form-control" id="precio_u" name="precio_u" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
 					<label for="cantidad_stock">Cantidad Stock</label>
 					<input type="text" class="form-control" id="cantidad_stock" name="cantidad_stock" />
 				</div>
-				<br/>
-                <div class="form-group">
+				
+                <div class="form-group mb-3">
 					<label for="cantidad_vendida">Cantidad Vendida</label>
 					<input type="text" class="form-control" id="cantidad_vendida" name="cantidad_vendida" />
 				</div>
-				<br/>
-				<div class="form-group">
+				
+				<div class="form-group mb-3">
                     <button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button>
                 </div>
 				
