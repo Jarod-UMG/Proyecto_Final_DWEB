@@ -12,7 +12,7 @@
 		
 		public function get_sucursales()
 		{
-			$sql = "SELECT id_sucursal, nombre_sucursal FROM sucursales";
+			$sql = "SELECT id_sucursal, nombre_sucursal, direccion_sucursal FROM sucursales";
 			$resultado = $this->db->query($sql);
 			while($row = $resultado->fetch_assoc())
 			{
@@ -20,31 +20,31 @@
 			}
 			return $this->sucursales;
 		}
-		/*
-		public function insertar($nombre_rol){
+		
+		public function insertar($nombre_sucursal, $direccion_sucursal){
 			
-			$resultado = $this->db->query("INSERT INTO sucursales (nombre_rol) VALUES ('$nombre_rol')");
+			$resultado = $this->db->query("INSERT INTO sucursales (nombre_sucursal, direccion_sucursal) VALUES ('$nombre_sucursal', '$direccion_sucursal')");
 			
 		}
 		
-		public function modificar($id, $nombre_rol){
+		public function modificar($id_sucursal, $nombre_sucursal, $direccion_sucursal){
 			
-			$resultado = $this->db->query("UPDATE sucursales SET nombre_rol='$nombre_rol' WHERE id = '$id'");			
+			$resultado = $this->db->query("UPDATE sucursales SET nombre_sucursal='$nombre_sucursal', direccion_sucursal='$direccion_sucursal' WHERE id_sucursal = '$id_sucursal'");			
 		}
 		
-		public function eliminar($id){
+		public function eliminar($id_sucursal){
 			
-			$resultado = $this->db->query("DELETE FROM sucursales WHERE id = '$id'");
+			$resultado = $this->db->query("DELETE FROM sucursales WHERE id_sucursal = '$id_sucursal'");
 			
 		}
 		
-		public function get_sucursal($id)
+		public function get_sucursal($id_sucursal)
 		{
-			$sql = "SELECT *FROM sucursales WHERE id_sucursal = '$id'";
+			$sql = "SELECT *FROM sucursales WHERE id_sucursal = '$id_sucursal'";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 
 			return $row;
-		}*/
+		}
 	} 
 ?>

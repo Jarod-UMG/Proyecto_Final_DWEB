@@ -17,11 +17,13 @@ require_once "views/Inicio.php";
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
 			<a href="index.php?c=empleados&a=nuevo" class="btn btn-primary">Agregar</a>
-			
-			<br />
-			<br />
+			<br/>
+			<br/>
+			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar empleado">
+
+			<br/>
 			<div class="table-responsive">
-				<table border="1" width="80%" class="table table-dark table-hover table-striped">
+				<table border="1" id="myTable" width="80%" class="table table-dark table-hover table-striped">
 					<thead>
 						<tr>
 							<th>Nombre</th>
@@ -54,4 +56,27 @@ require_once "views/Inicio.php";
 			</div>
 		</div>
 	</body>
+	<script>
+		function myFunction() {
+		// Declare variables
+		var input, filter, table, tr, td, i, txtValue;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+
+		// Loop through all table rows, and hide those who don't match the search query
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+			}
+		}
+		}
+</script>
 </html>

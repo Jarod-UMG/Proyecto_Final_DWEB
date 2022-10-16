@@ -20,31 +20,31 @@
 			}
 			return $this->diagnosticos;
 		}
-		/*
-		public function insertar($nombre_rol){
+		
+		public function insertar($diagnostico){
 			
-			$resultado = $this->db->query("INSERT INTO diagnosticos (nombre_rol) VALUES ('$nombre_rol')");
+			$resultado = $this->db->query("INSERT INTO diagnosticos (diagnostico) VALUES ('$diagnostico')");
 			
 		}
 		
-		public function modificar($id, $nombre_rol){
+		public function modificar($id_diagnostico, $diagnostico){
 			
-			$resultado = $this->db->query("UPDATE diagnosticos SET nombre_rol='$nombre_rol' WHERE id = '$id'");			
+			$resultado = $this->db->query("UPDATE diagnosticos SET diagnostico='$diagnostico' WHERE id_diagnostico = '$id_diagnostico'");			
 		}
 		
-		public function eliminar($id){
+		public function eliminar($id_diagnostico){
 			
-			$resultado = $this->db->query("DELETE FROM diagnosticos WHERE id = '$id'");
+			$resultado = $this->db->query("DELETE FROM diagnosticos WHERE id_diagnostico = '$id_diagnostico'");
 			
 		}
 		
-		public function get_rol($id)
+		public function get_diagnostico($id_diagnostico)
 		{
-			$sql = "SELECT r.id_rol, r.nombre_rol FROM diagnosticos AS r INNER JOIN empleados AS e WHERE e.id_rol = '$id'";
+			$sql = "SELECT *FROM diagnosticos WHERE id_diagnostico = '$id_diagnostico'";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 
 			return $row;
-		}*/
+		}
 	} 
 ?>

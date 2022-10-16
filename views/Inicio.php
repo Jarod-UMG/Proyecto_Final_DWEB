@@ -65,6 +65,15 @@ div.content {
   <a class="active bg-primary" href="index.php?c=pacientes">Pacientes</a>
   <a class="active bg-primary" href="index.php?c=historiales">Historiales</a>
   <a class="active bg-primary" href="index.php?c=medicamentos">Medicamentos</a>
+  <a class="active bg-primary" href="index.php?c=roles">Roles</a>
+  <a class="active bg-primary" href="index.php?c=sucursales">Sucursales</a>
+  <a class="active bg-primary" href="index.php?c=doctores">Doctores</a>
+  <a class="active bg-primary" href="index.php?c=especialidades">Especialidades</a>
+  <a class="active bg-primary" href="index.php?c=diagnosticos">Diagnosticos</a>
+  <a class="active bg-primary" href="index.php?c=examenes">Examenes</a>
+  <a class="active bg-primary" href="index.php?c=clientes">Clientes</a>
+  <a class="active bg-primary" href="index.php?c=habitaciones">Habitaciones</a>
+  <a class="active bg-primary" href="index.php?c=pacxhabitaciones">Paciente-Habitacion</a>
 </div>
 	</body>
 </html>

@@ -7,18 +7,17 @@ require_once "views/Inicio.php";
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title><?php echo $data["titulo"]; ?></title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    </head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	</head>
 	
 	<body>
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<a href="index.php?c=pacientes&a=nuevo" class="btn btn-primary">Agregar</a>
+			<a href="index.php?c=doctores&a=nuevo" class="btn btn-primary">Agregar</a>
 			<br/>
 			<br/>
-			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar paciente">
+			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar doctor">
 
 			<br/>
 			<div class="table-responsive">
@@ -26,9 +25,8 @@ require_once "views/Inicio.php";
 					<thead>
 						<tr>
 							<th>Nombre</th>
-							<th>Apellido</th>
-							<th>Direccion</th>
-							<th>Telefono</th>
+							<th>Especialidad</th>
+							<th>Sucursal</th>
 							<th></th>
 							<th></th>
 						</tr>
@@ -36,14 +34,13 @@ require_once "views/Inicio.php";
 					
 					<tbody>
 						<?php                  
-                            foreach($data["pacientes"] as $dato) {
+                            foreach($data["doctores"] as $dato) {
 							echo "<tr>";
-							echo "<td>".$dato["nombre_paciente"]."</td>";
-							echo "<td>".$dato["apellido_paciente"]."</td>";
-							echo "<td>".$dato["direccion_paciente"]."</td>";
-							echo "<td>".$dato["telefono_paciente"]."</td>";
-							echo "<td><a href='index.php?c=pacientes&a=modificar&id=".$dato["id_paciente"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=pacientes&a=eliminar&id=".$dato["id_paciente"]."' class='btn btn-danger'>Eliminar</a></td>";
+							echo "<td>".$dato["nombre_doctor"]."</td>";
+							echo "<td>".$dato["nombre_especialidad"]."</td>";
+							echo "<td>".$dato["nombre_sucursal"]."</td>";
+							echo "<td><a href='index.php?c=doctores&a=modificar&id=".$dato["id_doctor"]."' class='btn btn-warning'>Modificar</a></td>";
+							echo "<td><a href='index.php?c=doctores&a=eliminar&id=".$dato["id_doctor"]."' class='btn btn-danger'>Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>
@@ -64,7 +61,7 @@ require_once "views/Inicio.php";
 
 		// Loop through all table rows, and hide those who don't match the search query
 		for (i = 0; i < tr.length; i++) {
-			td = tr[i].getElementsByTagName("td")[0];
+			td = tr[i].getElementsByTagName("td")[1];
 			if (td) {
 			txtValue = td.textContent || td.innerText;
 			if (txtValue.toUpperCase().indexOf(filter) > -1) {

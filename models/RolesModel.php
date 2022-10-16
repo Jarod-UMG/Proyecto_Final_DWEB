@@ -27,24 +27,24 @@
 			
 		}
 		
-		public function modificar($id, $nombre_rol){
+		public function modificar($id_rol, $nombre_rol){
 			
-			$resultado = $this->db->query("UPDATE roles SET nombre_rol='$nombre_rol' WHERE id = '$id'");			
+			$resultado = $this->db->query("UPDATE roles SET nombre_rol='$nombre_rol' WHERE id_rol = '$id_rol'");			
 		}
 		
-		public function eliminar($id){
+		public function eliminar($id_rol){
 			
-			$resultado = $this->db->query("DELETE FROM roles WHERE id = '$id'");
+			$resultado = $this->db->query("DELETE FROM roles WHERE id_rol = '$id_rol'");
 			
 		}
-		/*
-		public function get_rol($id)
+		
+		public function get_rol($id_rol)
 		{
-			$sql = "SELECT r.id_rol, r.nombre_rol FROM roles AS r INNER JOIN empleados AS e WHERE e.id_rol = '$id'";
+			$sql = "SELECT *FROM roles WHERE id_rol = '$id_rol'";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 
 			return $row;
-		}*/
+		}
 	} 
 ?>

@@ -7,6 +7,11 @@
 	require_once "controllers/Empleados.php";
 	require_once "controllers/Pacientes.php";
 	require_once "controllers/Historiales.php";
+	require_once "controllers/Doctores.php";
+	require_once "controllers/Especialidades.php";
+	require_once "controllers/Clientes.php";
+	require_once "controllers/Habitaciones.php";
+	require_once "controllers/Pacxhabitaciones.php";
 	
 	if(isset($_GET['c'])){
 		

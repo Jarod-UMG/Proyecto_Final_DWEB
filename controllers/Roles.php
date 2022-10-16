@@ -1,72 +1,66 @@
 <?php
 	
-	class rolesController {
+	class RolesController {
 		
 		public function __construct(){
 			require_once "models/RolesModel.php";
 		}
 		
 		public function index(){
-			
-			
 			$roles = new Roles_model();
+
 			$data["titulo"] = "Roles";
 			$data["roles"] = $roles->get_roles();
 			
-			require_once "views/roles/roles_view.php";	
+			require_once "views/roles/roles.php";	
 		}
 		
-		/*public function nuevo(){
-			
+		public function nuevo(){
 			$data["titulo"] = "Roles";
-			require_once "views/vehiculos/vehiculos_nuevo.php";
+
+			require_once "views/roles/roles_nuevo.php";
 		}
 		
 		public function guarda(){
+			$nombre_rol = $_POST['nombre_rol'];
 			
-			$placa = $_POST['placa'];
-			$marca = $_POST['marca'];
-			$modelo = $_POST['modelo'];
-			$anio = $_POST['anio'];
-			$color = $_POST['color'];
-			
-			$vehiculos = new Vehiculos_model();
-			$vehiculos->insertar($placa, $marca, $modelo, $anio, $color);
-			$data["titulo"] = "Vehiculos";
+			$roles = new Roles_model();
+			$roles->insertar($nombre_rol);
+
+			$data["titulo"] = "Roles";
+
 			$this->index();
 		}
 		
 		public function modificar($id){
+			$roles = new Roles_model();
 			
-			$vehiculos = new Vehiculos_model();
-			
-			$data["id"] = $id;
-			$data["vehiculos"] = $vehiculos->get_vehiculo($id);
-			$data["titulo"] = "Vehiculos";
-			require_once "views/vehiculos/vehiculos_modifica.php";
+			$data["id_rol"] = $id;
+			$data["roles"] = $roles->get_Rol($id);
+			$data["titulo"] = "Roles";
+
+			require_once "views/roles/roles_modificar.php";
 		}
 		
 		public function actualizar(){
+			$id = $_POST['id_rol'];
+			$nombre_rol = $_POST['nombre_rol'];
 
-			$id = $_POST['id'];
-			$placa = $_POST['placa'];
-			$marca = $_POST['marca'];
-			$modelo = $_POST['modelo'];
-			$anio = $_POST['anio'];
-			$color = $_POST['color'];
+			$roles = new Roles_model();
+			$roles->modificar($id, $nombre_rol);
 
-			$vehiculos = new Vehiculos_model();
-			$vehiculos->modificar($id, $placa, $marca, $modelo, $anio, $color);
-			$data["titulo"] = "Vehiculos";
+			$data["titulo"] = "Roles";
+
 			$this->index();
 		}
 		
 		public function eliminar($id){
+			$roles = new Roles_model();
+			$roles->eliminar($id);
+
+			$data["titulo"] = "Roles";
 			
-			$vehiculos = new Vehiculos_model();
-			$vehiculos->eliminar($id);
-			$data["titulo"] = "Vehiculos";
 			$this->index();
-		}*/	
+		}
 	}
 ?>
