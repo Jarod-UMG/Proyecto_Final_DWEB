@@ -1,6 +1,7 @@
 <?php
 require_once "views/Inicio.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -9,36 +10,41 @@ require_once "views/Inicio.php";
 		<title><?php echo $data["titulo"]; ?></title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
    		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-	</head>
+    </head>
 	
 	<body>
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
-
-			<a href="index.php?c=sucursales&a=nuevo" class="btn btn-primary">Agregar</a>
+			
+			<a href="index.php?c=dfacturas&a=nuevo" class="btn btn-primary">Agregar</a>
 			<br/>
 			<br/>
-			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar sucursal">
+			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar detalle">
 
 			<br/>
 			<div class="table-responsive">
 				<table border="1" id="myTable" width="80%" class="table table-dark table-hover table-striped">
 					<thead>
 						<tr>
-							<th>Nombre</th>
-                            <th>Direccion</th>
+							<th>No. Factura</th>
+							<th>Medicamento</th>
+							<th>Cantidad</th>
+							<th>Precio Unitario</th>
 							<th></th>
 							<th></th>
 						</tr>
 					</thead>
 					
 					<tbody>
-						<?php foreach($data["sucursales"] as $dato) {
+						<?php                  
+                            foreach($data["dfacturas"] as $dato) {
 							echo "<tr>";
-							echo "<td>".$dato["nombre_sucursal"]."</td>";
-                            echo "<td>".$dato["direccion_sucursal"]."</td>";
-							echo "<td><a href='index.php?c=sucursales&a=modificar&id=".$dato["id_sucursal"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=sucursales&a=eliminar&id=".$dato["id_sucursal"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
+							echo "<td>".$dato["no_factura"]."</td>";
+							echo "<td>".$dato["nombre_medicamento"]."</td>";
+							echo "<td>".$dato["cantidad"]."</td>";
+							echo "<td>".$dato["precio_u"]."</td>";
+							echo "<td><a href='index.php?c=dfacturas&a=modificar&id=".$dato["id_dfactura"]."' class='btn btn-warning'>Modificar</a></td>";
+							echo "<td><a href='index.php?c=dfacturas&a=eliminar&id=".$dato["id_dfactura"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

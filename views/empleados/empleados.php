@@ -46,7 +46,7 @@ require_once "views/Inicio.php";
 							echo "<td>".$dato["nombre_rol"]."</td>";
 							echo "<td>".$dato["nombre_sucursal"]."</td>";
 							echo "<td><a href='index.php?c=empleados&a=modificar&id=".$dato["id_empleado"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=empleados&a=eliminar&id=".$dato["id_empleado"]."' class='btn btn-danger'>Eliminar</a></td>";
+							echo "<td><a href='index.php?c=empleados&a=eliminar&id=".$dato["id_empleado"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

@@ -14,30 +14,40 @@ require_once "views/Inicio.php";
 	<body>
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
-			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=pacxhabitaciones&a=guarda" autocomplete="off">
-
+			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=dfacturas&a=guarda" autocomplete="off">
+				
 				<div class="form-group mb-3">
-					<label for="id_paciente">Paciente</label>
-                    <select class="form-select" name="id_paciente" id="id_paciente">
-                        <option value=0> ---- Elija un paciente---- </option>
+					<label for="no_factura">No. Factura</label>
+                    <select class="form-select" name="no_factura" id="no_factura">
+                        <option value=0> ---- Elija una factura---- </option>
                         <?php 
-                            foreach($datar["pacientes"] as $dato){
-                                echo "<option value=".$dato["id_paciente"].">".$dato["nombre_paciente"]."</option>";
+                            foreach($datar["facturas"] as $dato){
+                                echo "<option value=".$dato["no_factura"].">".$dato["no_factura"]."</option>";
                             }
                         ?>
                     </select>
 				</div>
                 
                 <div class="form-group mb-3">
-					<label for="id_habitacion">Habitacion</label>
-                    <select class="form-select" name="id_habitacion" id="id_habitacion">
-                        <option value=0> ---- Elija una habitacion---- </option>
+					<label for="id_medicamento">Medicamento</label>
+                    <select class="form-select" name="id_medicamento" id="id_medicamento">
+                        <option value=0> ---- Elija un medicamento---- </option>
                         <?php 
-                            foreach($datas["habitaciones"] as $dato){
-                                echo "<option value=".$dato["id_habitacion"].">".$dato["nombre_habitacion"]."</option>";
+                            foreach($datas["medicamentos"] as $dato){
+                                echo "<option value=".$dato["id_medicamento"].">".$dato["nombre_medicamento"]."</option>";
                             }
                         ?>
                     </select>
+				</div>
+				
+				<div class="form-group mb-3">
+					<label for="cantidad">Cantidad</label>
+					<input type="text" class="form-control" id="cantidad" name="cantidad" />
+				</div>
+				
+				<div class="form-group mb-3">
+					<label for="precio_u">Precio Unitario</label>
+					<input type="text" class="form-control" id="precio_u" name="precio_u" />
 				</div>
 				
 				<div class="form-group mb-3">

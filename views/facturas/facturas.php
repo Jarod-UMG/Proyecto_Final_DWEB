@@ -14,31 +14,38 @@ require_once "views/Inicio.php";
 	<body>
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
-
-			<a href="index.php?c=sucursales&a=nuevo" class="btn btn-primary">Agregar</a>
+			
+			<a href="index.php?c=facturas&a=nuevo" class="btn btn-primary">Agregar</a>
 			<br/>
 			<br/>
-			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar sucursal">
+			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar factura">
 
 			<br/>
 			<div class="table-responsive">
 				<table border="1" id="myTable" width="80%" class="table table-dark table-hover table-striped">
 					<thead>
 						<tr>
-							<th>Nombre</th>
+							<th>Paciente</th>
+							<th>Empleado</th>
+							<th>Fecha</th>
                             <th>Direccion</th>
+							<th>Sucursal</th>
 							<th></th>
 							<th></th>
 						</tr>
 					</thead>
 					
 					<tbody>
-						<?php foreach($data["sucursales"] as $dato) {
+						<?php                  
+                            foreach($data["facturas"] as $dato) {
 							echo "<tr>";
+							echo "<td>".$dato["nombre_cliente"]."</td>";
+							echo "<td>".$dato["nombre_empleado"]."</td>";
+							echo "<td>".$dato["fecha"]."</td>";
+							echo "<td>".$dato["direccion"]."</td>";
 							echo "<td>".$dato["nombre_sucursal"]."</td>";
-                            echo "<td>".$dato["direccion_sucursal"]."</td>";
-							echo "<td><a href='index.php?c=sucursales&a=modificar&id=".$dato["id_sucursal"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=sucursales&a=eliminar&id=".$dato["id_sucursal"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
+							echo "<td><a href='index.php?c=facturas&a=modificar&id=".$dato["no_factura"]."' class='btn btn-warning'>Modificar</a></td>";
+							echo "<td><a href='index.php?c=facturas&a=eliminar&id=".$dato["no_factura"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>
@@ -59,7 +66,7 @@ require_once "views/Inicio.php";
 
 		// Loop through all table rows, and hide those who don't match the search query
 		for (i = 0; i < tr.length; i++) {
-			td = tr[i].getElementsByTagName("td")[0];
+			td = tr[i].getElementsByTagName("td")[1];
 			if (td) {
 			txtValue = td.textContent || td.innerText;
 			if (txtValue.toUpperCase().indexOf(filter) > -1) {

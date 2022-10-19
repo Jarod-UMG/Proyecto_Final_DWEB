@@ -12,6 +12,8 @@
 	require_once "controllers/Clientes.php";
 	require_once "controllers/Habitaciones.php";
 	require_once "controllers/Pacxhabitaciones.php";
+	require_once "controllers/Facturas.php";
+	require_once "controllers/Dfacturas.php";
 	
 	if(isset($_GET['c'])){
 		

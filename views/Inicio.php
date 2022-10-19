@@ -74,6 +74,8 @@ div.content {
   <a class="active bg-primary" href="index.php?c=clientes">Clientes</a>
   <a class="active bg-primary" href="index.php?c=habitaciones">Habitaciones</a>
   <a class="active bg-primary" href="index.php?c=pacxhabitaciones">Paciente-Habitacion</a>
+  <a class="active bg-primary" href="index.php?c=facturas">Facturas</a>
+  <a class="active bg-primary" href="index.php?c=dfacturas">Detalles Facturas</a>
 </div>
 	</body>
 </html>

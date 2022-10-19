@@ -43,7 +43,7 @@ require_once "views/Inicio.php";
 							echo "<td>".$dato["direccion_paciente"]."</td>";
 							echo "<td>".$dato["telefono_paciente"]."</td>";
 							echo "<td><a href='index.php?c=pacientes&a=modificar&id=".$dato["id_paciente"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=pacientes&a=eliminar&id=".$dato["id_paciente"]."' class='btn btn-danger'>Eliminar</a></td>";
+							echo "<td><a href='index.php?c=pacientes&a=eliminar&id=".$dato["id_paciente"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>
