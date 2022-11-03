@@ -12,7 +12,7 @@
 		
 		public function get_habitaciones()
 		{
-			$sql = "SELECT  d.id_habitacion, d.nombre_habitacion, d.id_sucursal, s.nombre_sucursal FROM habitaciones AS d  INNER JOIN sucursales AS s ON d.id_sucursal = s. id_sucursal ORDER BY d.nombre_habitacion;";
+			$sql = "SELECT  d.id_habitacion, d.nombre_habitacion, d.id_sucursal, s.nombre_sucursal, d.disponible FROM habitaciones AS d  INNER JOIN sucursales AS s ON d.id_sucursal = s. id_sucursal ORDER BY d.nombre_habitacion;";
 			$resultado = $this->db->query($sql);
 			while($row = $resultado->fetch_assoc())
 			{

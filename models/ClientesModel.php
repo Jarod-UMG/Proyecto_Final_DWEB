@@ -21,15 +21,15 @@
 			return $this->clientes;
 		}
 		
-		public function insertar($nit, $nombre_cliente, $apellido_cliente, $telefono){
+		public function insertar($nit, $nombre_cliente, $apellido_cliente, $telefono, $usuario, $contra){
 			
-			$resultado = $this->db->query("INSERT INTO clientes (nit, nombre_cliente, apellido_cliente, telefono) VALUES ('$nit', '$nombre_cliente', '$apellido_cliente', '$telefono')");
+			$resultado = $this->db->query("INSERT INTO clientes (nit, nombre_cliente, apellido_cliente, telefono, usuario, contra) VALUES ('$nit', '$nombre_cliente', '$apellido_cliente', '$telefono', '$usuario', '$contra')");
 			
 		}
 		
-		public function modificar($id, $nit, $nombre_cliente, $apellido_cliente, $telefono){
+		public function modificar($id, $nit, $nombre_cliente, $apellido_cliente, $telefono, $usuario, $contra){
 			
-			$resultado = $this->db->query("UPDATE clientes SET nit='$nit', nombre_cliente='$nombre_cliente', apellido_cliente='$apellido_cliente', telefono='$telefono' WHERE id_cliente = '$id'");			
+			$resultado = $this->db->query("UPDATE clientes SET nit='$nit', nombre_cliente='$nombre_cliente', apellido_cliente='$apellido_cliente', telefono='$telefono', usuario='$usuario', contra='$contra' WHERE id_cliente = '$id'");			
 		}
 		
 		public function eliminar($id){

@@ -16,7 +16,7 @@ require_once "views/Inicio.php";
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<a href="index.php?c=empleados&a=nuevo" class="btn btn-primary">Agregar</a>
+			<a href="vistas.php?c=empleados&a=nuevo" class="btn btn-primary">Agregar</a>
 			<br/>
 			<br/>
 			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar empleado">
@@ -45,8 +45,8 @@ require_once "views/Inicio.php";
 							echo "<td>".$dato["nit"]."</td>";
 							echo "<td>".$dato["nombre_rol"]."</td>";
 							echo "<td>".$dato["nombre_sucursal"]."</td>";
-							echo "<td><a href='index.php?c=empleados&a=modificar&id=".$dato["id_empleado"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=empleados&a=eliminar&id=".$dato["id_empleado"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
+							echo "<td><a href='vistas.php?c=empleados&a=modificar&id=".$dato["id_empleado"]."' class='btn btn-warning'>Modificar</a></td>";
+							echo "<td><a href='vistas.php?c=empleados&a=eliminar&id=".$dato["id_empleado"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

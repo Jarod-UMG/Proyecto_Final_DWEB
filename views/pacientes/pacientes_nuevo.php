@@ -15,7 +15,7 @@ require_once "views/Inicio.php";
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=pacientes&a=guarda" autocomplete="off">
+			<form id="nuevo" name="nuevo" method="POST" action="vistas.php?c=pacientes&a=guarda" autocomplete="off">
 				
 				<div class="form-group mb-3">
 					<label for="nombre_paciente">Nombres</label>

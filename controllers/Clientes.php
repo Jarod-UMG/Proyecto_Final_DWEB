@@ -26,9 +26,11 @@
 			$nombre_cliente = $_POST['nombre_cliente'];
             $apellido_cliente = $_POST['apellido_cliente'];
             $telefono = $_POST['telefono'];
+			$usuario = $_POST['usuario'];
+			$contra = $_POST['contra'];
 			
 			$clientes = new Clientes_model();
-			$clientes->insertar($nit, $nombre_cliente, $apellido_cliente, $telefono);
+			$clientes->insertar($nit, $nombre_cliente, $apellido_cliente, $telefono, $usuario, $contra);
 			$data["titulo"] = "Clientes";
 			$this->index();
 		}
@@ -50,9 +52,11 @@
 			$nombre_cliente = $_POST['nombre_cliente'];
             $apellido_cliente = $_POST['apellido_cliente'];
             $telefono = $_POST['telefono'];
+			$usuario = $_POST['usuario'];
+			$contra = $_POST['contra'];
 
 			$clientes = new Clientes_model();
-			$clientes->modificar($id, $nit, $nombre_cliente, $apellido_cliente, $telefono);
+			$clientes->modificar($id, $nit, $nombre_cliente, $apellido_cliente, $telefono, $usuario, $contra);
 			$data["titulo"] = "Clientes";
 			$this->index();
 		}

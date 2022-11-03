@@ -16,7 +16,7 @@ require_once "views/Inicio.php";
 		<div class="container content">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<a href="index.php?c=clientes&a=nuevo" class="btn btn-primary">Agregar</a>
+			<a href="vistas.php?c=clientes&a=nuevo" class="btn btn-primary">Agregar</a>
 			<br/>
 			<br/>
 			<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Buscar cliente">
@@ -30,6 +30,8 @@ require_once "views/Inicio.php";
 							<th>Nombre</th>
 							<th>Apellido</th>
 							<th>Telefono</th>
+							<th>Usuario</th>
+							<th>Contraseña</th>
 							<th></th>
 							<th></th>
 						</tr>
@@ -43,8 +45,10 @@ require_once "views/Inicio.php";
 							echo "<td>".$dato["nombre_cliente"]."</td>";
 							echo "<td>".$dato["apellido_cliente"]."</td>";
 							echo "<td>".$dato["telefono"]."</td>";
-							echo "<td><a href='index.php?c=clientes&a=modificar&id=".$dato["id_cliente"]."' class='btn btn-warning'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=clientes&a=eliminar&id=".$dato["id_cliente"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
+							echo "<td>".$dato["usuario"]."</td>";
+							echo "<td>".$dato["contra"]."</td>";
+							echo "<td><a href='vistas.php?c=clientes&a=modificar&id=".$dato["id_cliente"]."' class='btn btn-warning'>Modificar</a></td>";
+							echo "<td><a href='vistas.php?c=clientes&a=eliminar&id=".$dato["id_cliente"]."' class='btn btn-danger' onclick=\"return confirm('Esta seguro de elimiar el registro?');\">Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>
@@ -68,7 +72,7 @@ require_once "views/Inicio.php";
 			td = tr[i].getElementsByTagName("td")[0];
 			if (td) {
 			txtValue = td.textContent || td.innerText;
-			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			if (txtValue.toUpperCase().vistasOf(filter) > -1) {
 				tr[i].style.display = "";
 			} else {
 				tr[i].style.display = "none";

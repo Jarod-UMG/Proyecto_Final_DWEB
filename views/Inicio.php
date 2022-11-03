@@ -59,23 +59,24 @@ div.content {
   
 	<body>
   <div class="sidebar">
-  <a class="active bg-primary"><img class="img-thumbnail" src="img/ajolote.jpg"></img></a>
-  <a class="active bg-primary" href="index.php">Administrador</a>
-  <a class="active bg-primary" href="index.php?c=empleados">Empleados</a>
-  <a class="active bg-primary" href="index.php?c=pacientes">Pacientes</a>
-  <a class="active bg-primary" href="index.php?c=historiales">Historiales</a>
-  <a class="active bg-primary" href="index.php?c=medicamentos">Medicamentos</a>
-  <a class="active bg-primary" href="index.php?c=roles">Roles</a>
-  <a class="active bg-primary" href="index.php?c=sucursales">Sucursales</a>
-  <a class="active bg-primary" href="index.php?c=doctores">Doctores</a>
-  <a class="active bg-primary" href="index.php?c=especialidades">Especialidades</a>
-  <a class="active bg-primary" href="index.php?c=diagnosticos">Diagnosticos</a>
-  <a class="active bg-primary" href="index.php?c=examenes">Examenes</a>
-  <a class="active bg-primary" href="index.php?c=clientes">Clientes</a>
-  <a class="active bg-primary" href="index.php?c=habitaciones">Habitaciones</a>
-  <a class="active bg-primary" href="index.php?c=pacxhabitaciones">Paciente-Habitacion</a>
-  <a class="active bg-primary" href="index.php?c=facturas">Facturas</a>
-  <a class="active bg-primary" href="index.php?c=dfacturas">Detalles Facturas</a>
+  <!--<a class="active bg-primary"><img class="img-thumbnail" src="img/ajolote.jpg"></img></a>-->
+  <a class="active bg-primary" href="vistas.php">Administrador</a>
+  <a class="active bg-primary" href="vistas.php?c=empleados">Empleados</a>
+  <a class="active bg-primary" href="vistas.php?c=pacientes">Pacientes</a>
+  <a class="active bg-primary" href="vistas.php?c=historiales">Historiales</a>
+  <a class="active bg-primary" href="vistas.php?c=medicamentos">Medicamentos</a>
+  <a class="active bg-primary" href="vistas.php?c=roles">Roles</a>
+  <a class="active bg-primary" href="vistas.php?c=sucursales">Sucursales</a>
+  <a class="active bg-primary" href="vistas.php?c=doctores">Doctores</a>
+  <a class="active bg-primary" href="vistas.php?c=especialidades">Especialidades</a>
+  <a class="active bg-primary" href="vistas.php?c=diagnosticos">Diagnosticos</a>
+  <a class="active bg-primary" href="vistas.php?c=examenes">Examenes</a>
+  <a class="active bg-primary" href="vistas.php?c=clientes">Clientes</a>
+  <a class="active bg-primary" href="vistas.php?c=habitaciones">Habitaciones</a>
+  <a class="active bg-primary" href="vistas.php?c=pacxhabitaciones">Paciente-Habitacion</a>
+</div>
+<div>
+  hola
 </div>
 	</body>
 </html>
